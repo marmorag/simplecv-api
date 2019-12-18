@@ -21,7 +21,7 @@ class UserFixtures extends Fixture
     {
         $user = new User();
         $user->setUsername('marmorag');
-        $user->setApiToken(bin2hex(random_bytes(64)));
+        $user->setApiToken(bin2hex(random_bytes(32)));
 
         $password = $this->encoder->encodePassword($user, 'test');
         $user->setPassword($password);

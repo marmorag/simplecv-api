@@ -13,12 +13,12 @@ use Doctrine\ORM\Mapping as ORM;
  * @ApiResource(
  *     collectionOperations={
  *         "get"={},
- *         "post"={"access_control"="is_granted('ROLE_USER')"}
+ *         "post"={"access_control"="is_granted('auth_view')"}
  *     },
  *     itemOperations={
  *          "get"={},
- *          "put"={"access_control"="is_granted('ROLE_USER')"},
- *          "delete"={"access_control"="is_granted('ROLE_USER')"}
+ *          "put"={"access_control"="is_granted('auth_view')"},
+ *          "delete"={"access_control"="is_granted('auth_view')"}
  *     }
  * )
  */
